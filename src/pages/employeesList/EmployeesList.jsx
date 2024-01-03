@@ -29,12 +29,12 @@ export default function EmployeesList() {
   const onSelectNumberOfLine = (number) => {
     dispatch(setNumberOfLineToDisplay(number));
   };
+
   const navigateToCreateEmployee = (
     <Link className="navigate-to-create-employee" to="/">
       Home
     </Link>
   );
-
   return (
     <div className="empoyees-list">
       <h2>Current Employees</h2>
