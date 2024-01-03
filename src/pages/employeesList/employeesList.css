@@ -1,0 +1,46 @@
+.empoyees-list{
+    width: 95%;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.filter-search-container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    /* border: 1px solid red; */
+    /* margin: 0 auto; */
+}
+.menu-select-employees-list-container{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.menu-select-employees-list-container .menu-select{
+    width: 60px;
+    height: 25px;
+
+}
+.menu-select-employees-list-container .button-select{
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #2870bdda;
+    /* color: #2870bdda; */
+}
+/* .menu-select-employees-list-container ul li{
+   
+} */
+.menu-select-employees-list-container ul li:nth-child(odd):hover{
+    background-color: #0cb9ee6d;
+}
+.menu-select-employees-list-container ul li:nth-child(even):hover{
+    background-color:#0cb9ee1e
+}

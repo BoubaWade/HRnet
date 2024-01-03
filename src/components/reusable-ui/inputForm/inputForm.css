@@ -1,0 +1,14 @@
+.input-container label{
+display: block;
+font-size: 14px;
+color: #2870BD;
+margin-bottom: 3px;
+}
+.input-container input{
+    background-color: #c2e6ff4a;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1.5px solid #2870bdda;
+    border-radius: 3px;
+    outline: none;
+}
