@@ -1,14 +1,12 @@
-/* fieldset{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 15px 0;
-    border: 2px solid #2870bdda;
-    border-radius: 5px;
-
+.address-inputs .menu-state{
+    font-size: 14px;
+color: #2870BD;
 }
-fieldset .menu-state{
-    margin-bottom: 30px;
-} */
+.address-inputs .button-state{
+    background-color: #c2e6ff4a;
+    height: 30px;
+    margin-top: 3px;
+    border: 1.5px solid #2870bdda;
+    border-radius: 3px;
+    outline: none;
+}

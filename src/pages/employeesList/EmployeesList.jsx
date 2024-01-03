@@ -13,7 +13,6 @@ import { getListFiltered } from "../../utils/helperFunctions";
 
 export default function EmployeesList() {
   const employeesList = useSelector((state) => state.employees.employeesList);
-  // const listSortedByFirstName=setAscendingSortByFirstName(employeesList)
   const [inputSearch, setInputSearch] = useState("");
   const dispatch = useDispatch();
 
@@ -29,10 +28,10 @@ export default function EmployeesList() {
   const onSelectNumberOfLine = (number) => {
     dispatch(setNumberOfLineToDisplay(number));
   };
-  console.log("je suis rendu");
+
   return (
     <div className="empoyees-list">
-      <h1>Current Employees</h1>
+      <h2>Current Employees</h2>
       <div className="filter-search-container">
         <div className="menu-select-employees-list-container">
           Show

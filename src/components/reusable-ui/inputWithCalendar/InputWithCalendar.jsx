@@ -58,7 +58,7 @@ export default function InputWithCalendar({ label, name, reduxAction }) {
         onClick={toggleCalendar}
       />
       {showCalendar && (
-        <div className="calendar-popup" style={{position:"absolute", zIndex:"1"}} >
+        <div className="calendar-popup" style={{position:"absolute", zIndex:"2"}} >
           <Calendar
             onChange={handleDateChange}
             value={date}

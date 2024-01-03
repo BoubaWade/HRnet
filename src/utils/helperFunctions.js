@@ -26,10 +26,6 @@ export const getListFiltered = (datas, inputValue) => {
   );
 };
 
-// export const setAscendingSortByFirstName = (datas) => {
-//   return datas.sort((a, b) => a.firstName.localeCompare(b.firstName));
-// };
-
 export const getEmployeesSortedByRestItem = (datas, itemValue, condition) => {
   if (condition) {
     return [...datas].sort((a, b) => a[itemValue]?.localeCompare(b[itemValue]));
@@ -53,16 +49,6 @@ export const getEmployeesSortedByZipCode = (datas, condition) => {
     return [...datas].sort((a, b) => parseInt(b.zipCode) - parseInt(a.zipCode));
   }
 };
-
-const itemsString = [
-  "firstName",
-  "lastName",
-  "department",
-  "street",
-  "city",
-  "state",
-];
-const itemsDate = ["dateOfStart", "dateOfBirth"];
 
 export function sortListEmployees(datas, item, condition) {
   switch (item) {
