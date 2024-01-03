@@ -1,4 +1,3 @@
-import React from "react";
 import "./modal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowModal } from "../../features/createEmployeeSlice";
@@ -15,7 +14,7 @@ export default function Modal() {
             className="overlay"
             onClick={() => dispatch(setShowModal(false))}
           ></div>
-          <div className="confirm-creation">
+          <div className="success-creation">
             <p> Employee Created!</p>
             <span
               className="icon-close_modal"

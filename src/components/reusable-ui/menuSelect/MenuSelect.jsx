@@ -6,6 +6,7 @@ const MenuSelect = ({
   onSelect,
   classNameContainer,
   label,
+  labelClassName,
   classNameButton,
   classNameList,
   classNameItem,
@@ -17,9 +18,6 @@ const MenuSelect = ({
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-    // if (!isOpen) {
-    //   menuRef.current.focus();
-    // }
   };
 
   const handleSelect = (option) => {
@@ -67,43 +65,43 @@ const MenuSelect = ({
   }, []);
 
   return (
-    <section
-      className={classNameContainer}
-      // onChange={() => setIsOpen(false)}
-      onKeyDown={handleKeyDown}
-      // tabIndex={0}
-      ref={menuRef}
-    >
-      {label}
-      <button
-        className={classNameButton}
-        type="button"
-        onClick={handleToggle}
-        aria-haspopup="true"
-        aria-expanded={isOpen}
+    <div>
+      <span className={labelClassName}>{label}</span>
+      <section
+        className={classNameContainer}
+        onKeyDown={handleKeyDown}
         tabIndex={0}
+        ref={menuRef}
       >
-        {selectedOption}
-        {/* ? selectedOption : "Sélectionner une option"} */}
-      </button>
-      {isOpen && (
-        <ul className={classNameList} role="menu" style={{ listStyle: "none" }}>
-          {options.map((option, index) => (
-            <li
-              className={classNameItem}
-              style={{ cursor: "pointer" }}
-              key={index}
-              tabIndex={0}
-              role="menuitem"
-              onClick={() => handleSelect(option)}
-              onKeyDown={(e) => handleOptionKeyDown(e, option)}
-            >
-              {option}
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+        <button
+          className={classNameButton}
+          type="button"
+          onClick={handleToggle}
+          aria-haspopup="true"
+          aria-expanded={isOpen}
+          tabIndex={-1}
+        >
+          {selectedOption}
+        </button>
+        {isOpen && (
+          <ul className={classNameList} role="menu">
+            {options.map((option, index) => (
+              <li
+                className={classNameItem}
+                style={{ cursor: "pointer" }}
+                key={index}
+                tabIndex={0}
+                role="menuitem"
+                onClick={() => handleSelect(option)}
+                onKeyDown={(e) => handleOptionKeyDown(e, option)}
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </div>
   );
 };
 

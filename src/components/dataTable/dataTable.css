@@ -2,61 +2,28 @@ table{
     width: 100%;
     margin: 0 auto 30px;
     border-collapse: collapse;
-    border-radius: 0 0 10px 10px;
+    border-radius:  5px;
     box-shadow: -1px 2px 12px 2px rgb(195, 193, 193);
     overflow: hidden;
 }
-/* thead{
-    background-color: black;
-    border-radius: 10px;
-    overflow: hidden;
-
-} */
 thead tr th{
-    /* height: 40px; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* background-color: #76adddeb; */
     background-color: #227690e3;
     height: 40px;
-    font-size: 14px;
-    /* color: rgb(245, 243, 243); */
+    font-size: 15px;
+    font-weight: 400;
     color: rgb(255, 255, 255);
-    /* border-radius: 5px; */
-
-    /* border-radius: 5px 5px 0 0; */
-
     cursor: pointer;
 }
-/* .item-container{
-    display: flex;
-} */
-thead tr th .icons-sort{
-   
-    /* display: inline; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* height: 40px; */
-    /* background-color: transparent; */
-    /* color: rgb(255, 255, 255); */
-}
 .icon-sort-up{
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1;
-    /* display: inline; */
-    /* margin-bottom: 3px;  */
     cursor: pointer;
     padding-left: 5px;
 }
 .icon-sort-down{
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
-    /* display: inline-block; */
-    /* margin-left: 3px; */
     cursor: pointer;
-
-
 }
 tbody tr td{
     height: 35px;
@@ -67,9 +34,6 @@ tbody tr td{
 tbody tr:nth-child(even) td{
     background-color: #0cb9ee32;
 }
-tbody tr:nth-child(odd) td{
-    /* background-color: #0cb9ee6d; */
-}
 .no-result-of-search{
     background-color: #0cb9ee1e;
 }
@@ -77,22 +41,27 @@ tbody tr:nth-child(odd) td{
     background-color: transparent;
 
 }
-
-.pagination-container{
+.pagination{
+    display: flex;
+    justify-content: space-between;
+}
+.pagination-left{
     display: flex;
     justify-content: flex-end;
 }
-.pagination-item{}
-/* .pagination-container li{
-    width: 20px;
-    border: 1px solid pink;
-    list-style-type: none;
-} */
-.pagination-container button{
-    width: 30px;
+.pagination-left button{
+    width: 35px;
+    height: 25px;
     margin-left: 5px;
-    
+    cursor: pointer;
 }
-button.actived{
-    background: red;
+.pagination-left button.actived{
+    background: #227690e3;
+    color: white;
+    border: none;
+    border-radius: 2px;
 } 
+.pagination-right{
+    font-size: 14px;
+    margin-bottom: 20px;
+}

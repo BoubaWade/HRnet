@@ -22,9 +22,6 @@ const employeesListSlice = createSlice({
     setNumberOfLineToDisplay: (state, { payload }) => {
       state.numberOfLineToDisplay = payload;
     },
-    // setEmployeesSortedByItem: (state, { payload }) => {
-    //   state.employeesList = payload;
-    // },
   },
 });
 
@@ -32,6 +29,5 @@ export const {
   setEmployeesList,
   setEmployeesListFiltered,
   setNumberOfLineToDisplay,
-  // setEmployeesSortedByItem,
 } = employeesListSlice.actions;
 export default employeesListSlice.reducer;

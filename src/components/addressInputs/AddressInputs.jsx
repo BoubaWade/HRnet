@@ -44,7 +44,6 @@ export default function AddressForm() {
 
   return (
     <div className="address address-inputs">
-      {/* <legend>Address</legend> */}
       {inputsTextAddressFields.map((field, index) => (
         <InputForm
           key={index}
@@ -60,7 +59,9 @@ export default function AddressForm() {
         options={listOfStatesName}
         onSelect={onSelect}
         label="State"
+        labelClassName="label-state"
         classNameContainer="menu-state"
+        classNameButton="button-state"
       />
       <InputForm
         id="zip-code"
