@@ -16,15 +16,15 @@ export default function InputWithCalendar({ label, name, reduxAction }) {
   const [date, setDate] = useState("");
   const [showCalendar, setShowCalendar] = useState(false);
   const dispatch = useDispatch();
-  const calendarRef=useRef()
+  const calendarRef = useRef();
 
   // const dateFormatted = date?.toLocaleDateString("us-US", options);
 
   const handleDateChange = (newDate) => {
     // if (newDate) {
-      const updatedDate = newDate?.toLocaleDateString("us-US", OPTIONS);
-      setDate(updatedDate);
-      dispatch(reduxAction(updatedDate));
+    const updatedDate = newDate?.toLocaleDateString("us-US", OPTIONS);
+    setDate(updatedDate);
+    dispatch(reduxAction(updatedDate));
     // }
   };
 
@@ -58,7 +58,10 @@ export default function InputWithCalendar({ label, name, reduxAction }) {
         onClick={toggleCalendar}
       />
       {showCalendar && (
-        <div className="calendar-popup" style={{position:"absolute", zIndex:"2"}} >
+        <div
+          className="calendar-popup"
+          style={{ position: "absolute", zIndex: "2" }}
+        >
           <Calendar
             onChange={handleDateChange}
             value={date}
