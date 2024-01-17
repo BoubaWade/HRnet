@@ -6,10 +6,10 @@ import {
   setDataNewEmployeeField,
   setStateOfAddress,
 } from "../../features/createEmployeeSlice";
-import MenuSelect from "../reusable-ui/menuSelect/MenuSelect";
 import { searchStateByName } from "../../utils/helperFunctions";
 import { inputsTextAddressFields } from "../../config/config";
 import { listOfStatesName } from "../../utils/constants";
+import { MenuSelect } from "react-menu-dropdown-list";
 
 export default function AddressForm() {
   const [addressData, setAddressData] = useState({});
@@ -55,14 +55,15 @@ export default function AddressForm() {
           onChange={(e) => handleChange(e)}
         />
       ))}
-      <MenuSelect
-        options={listOfStatesName}
-        onSelect={onSelect}
-        label="State"
-        labelClassName="label-state"
-        classNameContainer="menu-state"
-        classNameButton="button-state"
-      />
+      <div>
+        <span>State</span>
+        <MenuSelect
+          options={listOfStatesName}
+          onSelect={onSelect}
+          classNameContainer="menu-state"
+          classNameButton="button-state"
+        />
+      </div>
       <InputForm
         id="zip-code"
         name="zipCode"

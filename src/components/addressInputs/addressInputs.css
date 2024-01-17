@@ -1,6 +1,8 @@
 .address-inputs .menu-state{
     font-size: 14px;
 color: #2870BD;
+border: none;
+
 }
 .address-inputs .button-state{
     background-color: #c2e6ff4a;
@@ -9,4 +11,7 @@ color: #2870BD;
     border: 1.5px solid #2870bdda;
     border-radius: 3px;
     outline: none;
+}
+.address-inputs .label-state{
+    margin-right: 140px;
 }

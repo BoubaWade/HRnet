@@ -2,7 +2,7 @@ import "../employeesList/employeesList.css";
 import { useDispatch, useSelector } from "react-redux";
 import DataTable from "../../components/dataTable/DataTable";
 import InputForm from "../../components/reusable-ui/inputForm/InputForm";
-import MenuSelect from "../../components/reusable-ui/menuSelect/MenuSelect";
+import { MenuSelect } from "react-menu-dropdown-list";
 import { useEffect, useState } from "react";
 import {
   setEmployeesListFiltered,
