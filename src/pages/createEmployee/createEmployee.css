@@ -2,10 +2,9 @@
 width: 100vw;
 height: 100vh;
 max-width: 1500px;
-max-height: 800px;
+max-height: 900px;
 margin: 0 auto;
-background-color: #77a2afc6;
-
+background-color: #82a4ae34;
 }
 .page-content h1{
     background-color: #227690c6;
@@ -54,7 +53,7 @@ form .identity-inputs{
     justify-content: center;
     align-items: center;
    border-radius: 5px;
-   box-shadow: 0px 0px 5px 2px #227690e3;
+   box-shadow: 0px 0px 5px 2px #227690aa;
 }
 form .address-inputs{
     grid-area: 1 / 2 / 2 / 3; 
@@ -65,12 +64,12 @@ form .address-inputs{
     align-items: center;
     padding: 30px 70px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px 2px #227690e3;
+    box-shadow: 0px 0px 5px 2px #227690aa;
 }
 form .address-inputs span{
     display: inline-block;
     color:#2870BD;
-   font-size: 15px;
+   font-size: 14px;
    margin-bottom: 3px;
 }
 form .address-inputs .menu-state{
@@ -80,6 +79,24 @@ form .address-inputs .button-state{
     height: 30px;
     margin: 0;
 }
+form .menu-department-container{
+    width: calc(80% - 30px);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px 40px 20px;
+    box-shadow: 0px 0px 5px 2px #227690aa;
+    border-radius: 5px;
+}
+form .menu-department-container span{
+   font-size: 14px;
+   color:#2870bdda;
+}
 form .menu-department{
     grid-area: 2 / 1 / 3 / 3;
     color:#2870bdda;
@@ -87,8 +104,8 @@ form .menu-department{
     text-align: center;
     z-index: 1;
     border: none;
+    font-size: 14px;
 }
-
 form .button-menu{
     background-color: #c2e6ff4a;
     height: 30px;
@@ -108,8 +125,13 @@ form .submit-button{
    border: 2px solid #227690e3;
    border-radius: 3px;
    cursor: pointer;
+   
 }
 form .submit-button:hover{
-   color: black;
-   background-color:white ;
+    color: black;
+    background-color:white ;
+    box-shadow: 0px 0px 5px 2px #227690aa;
+    transition: 0.2s;
+    transform: scale(1.05);
+   border-radius: 5px;
 }

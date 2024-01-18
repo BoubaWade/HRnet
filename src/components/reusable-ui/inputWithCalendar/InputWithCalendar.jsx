@@ -4,31 +4,21 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useDispatch } from "react-redux";
 import InputForm from "../inputForm/InputForm";
+import { formateDate } from "../../../utils/helperFunctions";
 
 export default function InputWithCalendar({ label, name, reduxAction }) {
-  const OPTIONS = {
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  };
-  const initialDateFormatted = new Date().toLocaleDateString("us-US", OPTIONS);
-
   const [date, setDate] = useState("");
   const [showCalendar, setShowCalendar] = useState(false);
   const dispatch = useDispatch();
   const calendarRef = useRef();
 
-  // const dateFormatted = date?.toLocaleDateString("us-US", options);
-
   const handleDateChange = (newDate) => {
-    // if (newDate) {
-    const updatedDate = newDate?.toLocaleDateString("us-US", OPTIONS);
-    setDate(updatedDate);
-    dispatch(reduxAction(updatedDate));
-    // }
+    setDate(formateDate(newDate));
+    dispatch(reduxAction(formateDate(newDate)));
   };
 
   const toggleCalendar = () => {
+    setDate("");
     setShowCalendar(!showCalendar);
   };
 
@@ -48,7 +38,6 @@ export default function InputWithCalendar({ label, name, reduxAction }) {
   return (
     <div ref={calendarRef}>
       <InputForm
-        // id={label}
         label={label}
         type="text"
         name={name}

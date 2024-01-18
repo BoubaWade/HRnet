@@ -7,15 +7,11 @@ import { useDispatch } from "react-redux";
 import { setEmployeesListFiltered } from "../../features/employeesListSlice";
 
 export default function TableHeader({ listToDisplay }) {
-  // const [showIconsUp, setShowIconsUp] = useState(true);
-  // const [showIconsDown, setShowIconsDown] = useState(true);
   const [isAscending, setIsAscending] = useState(true);
   const dispatch = useDispatch();
 
   const handleClick = (id) => {
     setIsAscending(!isAscending);
-    // setShowIconsUp(!showIconsUp);
-    // setShowIconsDown(!showIconsDown);
     const datasSortedByItem = sortListEmployees(listToDisplay, id, isAscending);
     dispatch(setEmployeesListFiltered(datasSortedByItem));
   };

@@ -10,13 +10,13 @@ export default function DataTable() {
     (state) => state.employees
   );
   const [currentPage, setCurrentPage] = useState(1);
-
   const indexOfLastItem = currentPage * numberOfLineToDisplay;
   const indexOfFirstItem = indexOfLastItem - numberOfLineToDisplay;
   const currentListEmployees = employeesListFiltered.slice(
     indexOfFirstItem,
     indexOfLastItem
   );
+
   const handleChangePage = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

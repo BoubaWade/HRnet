@@ -61,3 +61,12 @@ export function sortListEmployees(datas, item, condition) {
       return getEmployeesSortedByRestItem(datas, item, condition);
   }
 }
+
+export const formateDate = (date) => {
+  const OPTIONS = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  };
+  return date?.toLocaleDateString("us-US", OPTIONS);
+};

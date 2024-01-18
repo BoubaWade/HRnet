@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setJobDepartment } from "../../features/createEmployeeSlice";
 import IdentityInputs from "../../components/identityInputs/IdentityInputs";
-// import MenuSelect from "../../components/reusable-ui/menuSelect/MenuSelect";
 import AddressInputs from "../../components/addressInputs/AddressInputs.jsx";
 import { departmentList } from "../../utils/constants.js";
 import useForm from "./hooks/useForm.js";
@@ -30,7 +29,7 @@ export default function CreateEmployeeForm() {
     <form id="create-employee" onSubmit={(e) => handleSubmit(e)} ref={formRef}>
       <IdentityInputs />
       <AddressInputs />
-      <div>
+      <div className="menu-department-container">
         <span>Department</span>
         <MenuSelect
           options={departmentList}
