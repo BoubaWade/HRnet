@@ -4,7 +4,7 @@ import { setJobDepartment } from "../../features/createEmployeeSlice";
 import IdentityInputs from "../../components/identityInputs/IdentityInputs";
 import AddressInputs from "../../components/addressInputs/AddressInputs.jsx";
 import { departmentList } from "../../utils/constants.js";
-import useForm from "./hooks/useForm.js";
+import useForm from "../../hooks/useForm.js";
 import { MenuSelect } from "react-menu-dropdown-list";
 
 export default function CreateEmployeeForm() {

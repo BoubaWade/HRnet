@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setEmployeesList } from "../../../features/employeesListSlice";
-import { setShowModal } from "../../../features/createEmployeeSlice";
 import { useRef } from "react";
+import { setEmployeesList } from "../features/employeesListSlice";
+import { setShowModal } from "../features/createEmployeeSlice";
 
 export default function useForm() {
   const { dateOfBirth, dateOfStart, state, jobDepartment } = useSelector(
